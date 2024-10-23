@@ -53,7 +53,7 @@
 			&trans &kp COLON &kp LT &kp GT &kp SEMI
 				&trans &trans &trans &trans &trans
 			&kp LBRC &kp RBRC &kp LPAR &kp RPAR &kp AT
-				&trans &none &kp EQUAL &kp PLUS &kp PERC
+				&trans &none &kp EQUAL &kp PLUS &kp PRCNT
 			&trans &kp EXCL &kp LBKT &kp RBKT &trans
 				&trans &trans &trans &trans &trans
 					&trans &trans &trans &trans
