@@ -56,7 +56,7 @@
 			&kp Q &kp W &kp E &kp R &kp T
 				&kp Y &kp U &kp I &kp O &kp P
 			&ht LSHFT A &lt NUMBERS S &lt ARROWS D &lt SYMBOLS F &ht RALT G
-				&ht RALT H &lt BRACKETS J &lt MOUSE K &lt FUNCTIONS L &ht SEMI
+				&ht RALT H &lt BRACKETS J &lt MOUSE K &lt FUNCTIONS L &ht LSHFT SEMI
 			&kp Z &ht LCTRL X &ht LALT C &kp V &kp B
 				&kp N &kp M &ht LALT COMMA &ht RALT DOT &kp FSLH
 					&none &kp BSPC &lt ADJUST SPACE &none
