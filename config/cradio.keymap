@@ -20,6 +20,10 @@
 	>;
 };
 
+&soft_off {
+	hold-time-ms = <2000>; /* Hold for 2 seconds to power off. */
+};
+
 &mmv {
 	acceleration-exponent = <1>;
 	time-to-max-speed-ms = <300>;
@@ -59,7 +63,7 @@
 				&ht RALT H &lt BRACKETS J &lt MOUSE K &lt FUNCTIONS L &ht LSHFT SEMI
 			&kp Z &ht LCTRL X &ht LALT C &kp V &kp B
 				&kp N &kp M &ht LALT COMMA &ht RALT DOT &kp FSLH
-					&none &kp BSPC &lt ADJUST SPACE &none
+					&mo ADJUST &kp BSPC &lt ADJUST SPACE &mo ADJUST
 			>;
 		};
 
@@ -137,13 +141,13 @@
 
 		adjust {
 			bindings = <
-			&bootloader &trans &trans &kp ESC &trans
-				&trans &trans &trans &bootloader
-			&kp CAPS &trans &trans &kp ENTER &trans
-				&trans &kp LGUI &trans &trans &caps_word
-			&sys_reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
-				&trans &trans &kp RALT &kp RCTRL &sys_reset
-					&trans &kp TAB &none &trans
+			&bootloader &sys_reset &trans &kp ESC &bt BT_SEL 0
+				&trans &trans &trans &sys_reset &bootloader
+			&kp CAPS &caps_word &trans &kp ENTER &bt BT_SEL 1
+				&trans &kp LGUI &trans &caps_word &kp CAPS
+			&soft_off &kp RCTRL &kp RALT &trans &bt BT_SEL 2
+				&trans &trans &kp RALT &kp RCTRL &soft_off
+					&none &kp TAB &none &none
 			>;
 		};
 	};
