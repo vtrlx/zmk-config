@@ -145,7 +145,7 @@
 				&trans &trans &trans &sys_reset &bootloader
 			&kp CAPS &caps_word &trans &kp ENTER &bt BT_SEL 1
 				&trans &kp LGUI &trans &trans &kp LSHFT
-			&soft_off &kp RCTRL &kp RALT &trans &bt BT_SEL 2
+			&soft_off &kp RCTRL &kp RALT &bt BT_CLR &bt BT_SEL 2
 				&trans &trans &kp RALT &kp RCTRL &soft_off
 					&none &kp TAB &none &none
 			>;
