@@ -4,7 +4,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define BRACKETS 1
 #define SYMBOLS 2
@@ -24,13 +23,13 @@
 	hold-time-ms = <2000>; /* Hold for 2 seconds to power off. */
 };
 
-&ht {
+&mt {
 	flavor = "balanced";
 	tapping-term-ms = <220>;
 	quick-tap-ms = <150>;
 };
 
-&mt {
+&lt {
 	flavor = "balanced";
 	tapping-term-ms = <220>;
 	quick-tap-ms = <150>;
@@ -61,10 +60,10 @@
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T
 				&kp Y &kp U &kp I &kp O &kp P
-			&ht LSHFT A &lt NUMBERS S &lt CONTROLS D &lt SYMBOLS F &ht RALT G
-				&ht RALT H &lt BRACKETS J &lt ARROWS K &lt FUNCTIONS L &ht LSHFT SEMI
-			&kp Z &ht LCTRL X &ht LALT C &kp V &kp B
-				&kp N &kp M &ht LALT COMMA &ht LCTRL DOT &kp FSLH
+			&mt LSHFT A &lt NUMBERS S &lt CONTROLS D &lt SYMBOLS F &mt RALT G
+				&mt RALT H &lt BRACKETS J &lt ARROWS K &lt FUNCTIONS L &mt LSHFT SEMI
+			&kp Z &mt LCTRL X &mt LALT C &kp V &kp B
+				&kp N &kp M &mt LALT COMMA &mt LCTRL DOT &kp FSLH
 					&none &mo ADJUST &kp SPACE &none
 			>;
 		};
