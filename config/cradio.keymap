@@ -98,7 +98,7 @@
 			&kp INS &kp PG_UP &kp UP &kp PG_DN &kp DEL
 				&trans &trans &trans &trans &trans
 			&kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
-				&trans &kp LGUI &none &kp trans &kp LSHFT
+				&trans &kp LGUI &none &trans &kp LSHFT
 			&trans &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &trans
 				&trans &trans &kp LALT &kp LCTRL &trans
 					&trans &trans &trans &trans
