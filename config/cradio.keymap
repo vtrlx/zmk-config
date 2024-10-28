@@ -8,8 +8,8 @@
 
 #define BRACKETS 1
 #define SYMBOLS 2
-#define MOUSE 3
-#define ARROWS 4
+#define ARROWS 3
+#define CONTROLS 4
 #define FUNCTIONS 5
 #define NUMBERS 6
 #define ADJUST 7
@@ -59,8 +59,8 @@
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T
 				&kp Y &kp U &kp I &kp O &kp P
-			&ht LSHFT A &lt NUMBERS S &lt ARROWS D &lt SYMBOLS F &ht RALT G
-				&ht RALT H &lt BRACKETS J &lt MOUSE K &lt FUNCTIONS L &ht LSHFT SEMI
+			&ht LSHFT A &lt NUMBERS S &lt CONTROLS D &lt SYMBOLS F &ht RALT G
+				&ht RALT H &lt BRACKETS J &lt ARROWS K &lt FUNCTIONS L &ht LSHFT SEMI
 			&kp Z &ht LCTRL X &ht LALT C &kp V &kp B
 				&kp N &kp M &ht LALT COMMA &ht LCTRL DOT &kp FSLH
 					&mo ADJUST &kp BSPC &lt ADJUST SPACE &mo ADJUST
@@ -91,25 +91,25 @@
 			>;
 		};
 
-		mouse {
+		arrows {
 			bindings = <
-			&trans &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &kp PSCRN
+			&kp INS &kp PG_UP &kp UP &kp PG_DN &kp DEL
 				&trans &trans &trans &trans &trans
-			&msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT
-				&trans &mkp LCLK &none &mkp MCLK &mkp RCLK
-			&trans &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans
-				&trans &trans &trans &trans &trans
+			&kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
+				&trans &kp LGUI &none &kp trans &kp LSHFT
+			&trans &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &trans
+				&trans &trans &kp LALT &kp LCTRL &trans
 					&trans &trans &trans &trans
 			>;
 		};
 
-		arrows {
+		controls {
 			bindings = <
 			&trans &trans &trans &trans &trans
-				&kp INS &kp PG_UP &kp UP &kp PG_DN &kp DEL
-			&kp LSHFT &kp LALT &none &kp LGUI &trans
-				&kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
-			&trans &kp LCTRL &none &trans &trans
+				&trans &kp ESC &kp TAB &trans &trans
+			&kp LSHFT &trans &none &kp LGUI &trans
+				&kp BSPC &kp ENTER &trans &caps_word &kp CAPS
+			&trans &kp LCTRL &kp LALT &trans &trans
 				&trans &kp C_PREV &kp C_PP &kp C_NEXT &trans
 					&trans &trans &trans &trans
 			>;
@@ -141,13 +141,13 @@
 
 		adjust {
 			bindings = <
-			&bootloader &sys_reset &trans &kp ESC &bt BT_SEL 0
+			&bootloader &sys_reset &trans &trans &bt BT_SEL 0
 				&trans &trans &trans &sys_reset &bootloader
-			&kp CAPS &caps_word &trans &kp ENTER &bt BT_SEL 1
-				&trans &kp LGUI &trans &trans &kp LSHFT
+			&kp CAPS &caps_word &trans &kp LGUI &bt BT_SEL 1
+				&trans &kp LGUI &trans &caps_word &kp CAPS
 			&soft_off &kp RCTRL &kp RALT &bt BT_CLR &bt BT_SEL 2
 				&trans &trans &kp RALT &kp RCTRL &soft_off
-					&none &kp TAB &none &none
+					&none &none &none &none
 			>;
 		};
 	};
