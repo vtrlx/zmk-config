@@ -24,6 +24,18 @@
 	hold-time-ms = <2000>; /* Hold for 2 seconds to power off. */
 };
 
+&ht {
+	flavor = "balanced";
+	tapping-term-ms = <220>;
+	quick-tap-ms = <150>;
+};
+
+&mt {
+	flavor = "balanced";
+	tapping-term-ms = <220>;
+	quick-tap-ms = <150>;
+};
+
 /*
 &mmv {
 	acceleration-exponent = <1>;
@@ -41,18 +53,6 @@
 */
 
 / {
-	behaviors {
-		ht: hold_tap {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <220>;
-			quick-tap-ms = <150>;
-			require-prior-idle-ms = <100>;
-			bindings = <&kp>, <&kp>;
-		};
-	};
-
 	/* A keymap ressembling Pierre Chevalier's default for Ferris, but with the numbers, functions, arrows, and mousekey layers on opposite sides from where they "should" be. Most of the ViM-specific features are removed, and some necessary functions for Bluetooth are added. */
 
 	keymap {
@@ -95,7 +95,7 @@
 
 		arrows {
 			bindings = <
-			&kp INS &kp PG_UP &kp UP &kp PG_DN &kp DEL
+			&none &kp PG_UP &kp UP &kp PG_DN &kp PSCRN
 				&trans &trans &trans &trans &trans
 			&kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
 				&trans &kp LGUI &none &trans &kp LSHFT
@@ -108,7 +108,7 @@
 		controls {
 			bindings = <
 			&trans &trans &trans &trans &trans
-				&trans &kp ESC &kp TAB &trans &trans
+				&trans &kp ESC &kp TAB &kp INS &kp DEL
 			&kp LSHFT &trans &none &kp LGUI &trans
 				&kp BSPC &kp ENTER &trans &caps_word &kp CAPS
 			&trans &kp LCTRL &kp LALT &trans &trans
