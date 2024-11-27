@@ -60,10 +60,10 @@
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T
 				&kp Y &kp U &kp I &kp O &kp P
-			&mt LSHFT A &lt NUMBERS S &lt CONTROLS D &lt SYMBOLS F &mt RALT G
-				&mt RALT H &lt BRACKETS J &lt ARROWS K &lt FUNCTIONS L &mt LSHFT SEMI
-			&kp Z &mt LCTRL X &mt LALT C &kp V &kp B
-				&kp N &kp M &mt LALT COMMA &mt LCTRL DOT &kp FSLH
+			&mt LSHFT A &lt NUMBERS S &lt CONTROLS D &lt SYMBOLS F &kp G
+				&kp H &lt BRACKETS J &lt ARROWS K &lt FUNCTIONS L &mt LSHFT SEMI
+			&kp Z &mt LCTRL X &mt LALT C &mt RALT V &kp B
+				&kp N &mt RALT M &mt LALT COMMA &mt LCTRL DOT &kp FSLH
 					&none &mo ADJUST &kp SPACE &none
 			>;
 		};
